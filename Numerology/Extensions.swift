@@ -8,44 +8,40 @@
 
 import UIKit
 
-extension NSDate {
+extension Date {
     var stringValue: String{
         return self.toString()
     }
     
     func toString() -> String {
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         //formatter.dateFormat = "yyyy'-'MM'-'dd HH':'mm':'ss"
         formatter.dateFormat = "dd.MM.yyyy HH:mm"
-        let str = formatter.stringFromDate(self)
+        let str = formatter.string(from: self)
         return str
     }
     
     func toStringShort() -> String {
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         //        formatter.dateFormat = "yyyy-MM-dd"
         formatter.dateFormat = "dd.MM.yyyy"
-        let str = formatter.stringFromDate(self)
+        let str = formatter.string(from: self)
         return str
     }
-    
+}
 
-     
+extension Int {
+    func  toString() -> String {
+        return (String(self))
+    }
     
 }
 
-
-func VratSoucet (Hodnota: String) -> Int {
-    
+func VratSoucet (_ Hodnota: String) -> Int {
     let PoleHodnot = Hodnota.characters.flatMap { Int(String($0)) }
-    
     var result: Int = 0
-    
     for x in PoleHodnot {
-        
         result += x
-        
     }
-    
     return result
 }

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,16 +20,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Znw-zY-Ypi">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <frame key="frameInset" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Vl7-IO-wtg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <frame key="frameInset" width="375" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="qLa-bM-Mlp"/>
                                 </constraints>
                             </imageView>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="4aK-Of-pQa">
-                                <rect key="frame" x="0.0" y="160" width="375" height="216"/>
+                                <frame key="frameInset" minY="160" width="375" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="GWa-8I-yJq"/>
                                 </constraints>
@@ -38,62 +39,69 @@
                                 <locale key="locale" localeIdentifier="cs_CZ"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vyber datum narození" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ta-b8-otV">
-                                <rect key="frame" x="88" y="107" width="198" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="198" id="0ik-i5-HJZ"/>
                                     <constraint firstAttribute="height" constant="45" id="dJs-Gi-krd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpk-Cf-hDy" userLabel="Calculate" customClass="CustomButton" customModule="Numerology" customModuleProvider="target">
-                                <rect key="frame" x="126" y="409" width="123" height="37"/>
-                                <color key="backgroundColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="123" id="7Ko-4M-PXm"/>
                                     <constraint firstAttribute="height" constant="37" id="qLA-Nt-rOS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Vypočti">
-                                    <color key="titleColor" red="0.81960784313725488" green="0.81960784313725488" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.81960784313725488" green="0.81960784313725488" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="calculate" destination="BYZ-38-t0r" eventType="touchUpInside" id="XVc-lM-mxj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Číslo duše:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm5-Mp-KwF">
-                                <rect key="frame" x="41" y="523" width="113" height="38"/>
+                                <frame key="frameInset" minX="41" minY="523" width="113" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="113" id="4OC-DK-58V"/>
                                     <constraint firstAttribute="height" constant="38" id="IUE-nx-Gbh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TG0-8k-uMS">
-                                <rect key="frame" x="183" y="481" width="30" height="30"/>
+                                <frame key="frameInset" minX="183" minY="481" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xZo-qg-4tf" kind="show" id="EiL-YL-3xM"/>
+                                    <segue destination="xZo-qg-4tf" kind="show" identifier="showDescription" id="EiL-YL-3xM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Životní číslo:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b1-4o-xRc">
-                                <rect key="frame" x="41" y="477" width="113" height="38"/>
+                                <frame key="frameInset" minX="41" minY="477" width="113" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="113" id="3lA-vU-Myi"/>
                                     <constraint firstAttribute="height" constant="38" id="JI6-p0-7h3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p19-0L-bmd">
+                                <frame key="frameInset" minX="183" minY="527" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5Ta-b8-otV" firstAttribute="top" secondItem="Vl7-IO-wtg" secondAttribute="bottom" constant="23" id="9eS-ZM-3QC"/>
                             <constraint firstItem="Znw-zY-Ypi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="AMG-es-SbB"/>
@@ -115,15 +123,15 @@
                             <constraint firstItem="jpk-Cf-hDy" firstAttribute="top" secondItem="4aK-Of-pQa" secondAttribute="bottom" constant="33" id="z8A-Os-6rC"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="ButtonDatumNarozeni" destination="p19-0L-bmd" id="5AZ-M3-qhG"/>
                         <outlet property="ButtonZivotniCislo" destination="TG0-8k-uMS" id="eaW-zc-45h"/>
                         <outlet property="birthDate" destination="4aK-Of-pQa" id="8YL-Pq-STV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804.5" y="615.5"/>
+            <point key="canvasLocation" x="214" y="607"/>
         </scene>
         <!--Title-->
         <scene sceneID="NhS-wm-oJ2">
@@ -137,69 +145,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Are-2M-GIg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="tHF-RF-PZB">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7G8-yO-OeJ">
-                                <rect key="frame" x="20" y="53" width="335" height="594"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Životní číslo - 7
-
-8.1.1978 = 8 + 1 + 1 + 9 + 7 + 8 = 34 = 3 + 4 = 7	
-
-Tato osoba dává přednost duševní práci. Je snaha se realizovat ve skutečném kvalitním životě a vyvíjet se prací na sobě samém. Potřebuje pro svůj život přátelství. Manželství může být nesnadné, neboť chce být nezávislá. Dochází k nečekaným změnám v životě. Nic nedělat silou. K úspěchu je třeba dobře vnímat druhé a život a rozvíjet sebedůvěru. Přátelství a vztahy hrají hlavní úlohu. Realizace materiálních cílů je obtížná, i když peníze přicházejí nečekaným způsobem. Může se objevit sklon ke studiu, duchovnímu životu nebo velké cesty. Dobře působí venkov, hory nebo moře. U této osoby se může projevit léčitelské nadání ve všech směrech jako je fyzický, emocionální i duchovní směr. 
-
-Pozor na pesimismus a přílišnou strohost. Někdy je pyšná a nepřístupná. Nedostatek realismu. Pozor na samotu. Důležitá je nezaujatost.Životní číslo - 7
-
-8.1.1978 = 8 + 1 + 1 + 9 + 7 + 8 = 34 = 3 + 4 = 7	
-
-Tato osoba dává přednost duševní práci. Je snaha se realizovat ve skutečném kvalitním životě a vyvíjet se prací na sobě samém. Potřebuje pro svůj život přátelství. Manželství může být nesnadné, neboť chce být nezávislá. Dochází k nečekaným změnám v životě. Nic nedělat silou. K úspěchu je třeba dobře vnímat druhé a život a rozvíjet sebedůvěru. Přátelství a vztahy hrají hlavní úlohu. Realizace materiálních cílů je obtížná, i když peníze přicházejí nečekaným způsobem. Může se objevit sklon ke studiu, duchovnímu životu nebo velké cesty. Dobře působí venkov, hory nebo moře. U této osoby se může projevit léčitelské nadání ve všech směrech jako je fyzický, emocionální i duchovní směr. 
-
-Pozor na pesimismus a přílišnou strohost. Někdy je pyšná a nepřístupná. Nedostatek realismu. Pozor na samotu. Důležitá je nezaujatost.</string>
-                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Text pro dané číslo neexistuje" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7G8-yO-OeJ">
+                                <frame key="frameInset" minX="20" minY="99" width="335" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frs-cV-5dU">
-                                <rect key="frame" x="149" y="13" width="77" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="77" id="C8D-P8-4to"/>
-                                    <constraint firstAttribute="height" constant="32" id="QEh-FI-nat"/>
+                                    <constraint firstAttribute="height" constant="32" id="9I9-JA-FL6"/>
+                                    <constraint firstAttribute="width" constant="77" id="nSr-ed-wdr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbV-QZ-os4">
-                                <rect key="frame" x="20" y="17" width="14" height="24"/>
+                                <frame key="frameInset" minX="20" minY="17" width="14" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Back Arrow"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="gmT-Nf-mYU"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z6c-LG-20U">
+                                <frame key="frameInset" minX="20" minY="55" width="339" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Den narození"/>
+                                    <segment title="Životní číslo"/>
+                                </segments>
+                                <color key="tintColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="tabChanged:" destination="xZo-qg-4tf" eventType="valueChanged" id="47g-sR-YfC"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Are-2M-GIg" secondAttribute="trailing" constant="-20" id="4Pt-Mw-gZH"/>
-                            <constraint firstItem="Are-2M-GIg" firstAttribute="leading" secondItem="rZN-Rp-4n3" secondAttribute="leadingMargin" constant="-20" id="MBR-eh-6Dg"/>
-                            <constraint firstItem="frs-cV-5dU" firstAttribute="top" secondItem="rZN-Rp-4n3" secondAttribute="topMargin" constant="13" id="RbB-1A-DPt"/>
-                            <constraint firstItem="frs-cV-5dU" firstAttribute="centerX" secondItem="rZN-Rp-4n3" secondAttribute="centerX" id="TgV-16-QnG"/>
-                            <constraint firstItem="7G8-yO-OeJ" firstAttribute="trailing" secondItem="rZN-Rp-4n3" secondAttribute="trailingMargin" id="YTc-HD-ZbV"/>
-                            <constraint firstItem="GiY-hm-Zmi" firstAttribute="top" secondItem="7G8-yO-OeJ" secondAttribute="bottom" constant="20" id="Zvm-MZ-AhF"/>
-                            <constraint firstItem="GiY-hm-Zmi" firstAttribute="top" secondItem="Are-2M-GIg" secondAttribute="bottom" id="nfF-Lm-a3z"/>
-                            <constraint firstItem="Are-2M-GIg" firstAttribute="top" secondItem="rZN-Rp-4n3" secondAttribute="topMargin" id="o7O-m7-FNL"/>
-                            <constraint firstItem="7G8-yO-OeJ" firstAttribute="leading" secondItem="rZN-Rp-4n3" secondAttribute="leadingMargin" id="sQ1-9g-JkY"/>
+                            <constraint firstItem="frs-cV-5dU" firstAttribute="top" secondItem="rZN-Rp-4n3" secondAttribute="topMargin" constant="13" id="EwE-Kd-P0j"/>
+                            <constraint firstItem="frs-cV-5dU" firstAttribute="centerX" secondItem="rZN-Rp-4n3" secondAttribute="centerX" id="dZw-9a-q6P"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="LcS-jR-Zlc"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="btnBack" destination="RbV-QZ-os4" id="hi7-1c-yey"/>
+                        <outlet property="segmentedControl" destination="z6c-LG-20U" id="WO0-ne-j1e"/>
+                        <outlet property="textView" destination="7G8-yO-OeJ" id="K9Q-Pe-9Z6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qW-sD-LzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351.5" y="615.5"/>
+            <point key="canvasLocation" x="933.60000000000002" y="606.74662668665667"/>
         </scene>
     </scenes>
     <resources>
