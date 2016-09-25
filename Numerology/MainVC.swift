@@ -8,39 +8,58 @@
 
 import UIKit
 
-var ZivotniCislo: Int = 0
-var DusevniCislo: Int = 0
+var LifePathNumber: Int = 0
+var BirthPathNumber: Int = 0
+var dateChoosen: Date?
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var birthDate: UIDatePicker!
-    @IBOutlet weak var ButtonZivotniCislo: UIButton!
-    @IBOutlet weak var ButtonDatumNarozeni: UIButton!
+    @IBOutlet weak var buttonShowDetailVC: CustomButton!
+    @IBOutlet weak var buttonBirthPathNumber: UIButton!
+    @IBOutlet weak var buttonLifePathNumber: UIButton!
     
+    @IBOutlet weak var buttonHelp: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         birthDate.setValue(UIColor.white, forKeyPath: "textColor")
         birthDate.addTarget(self, action: #selector(self.datePickerValueChanged), for: UIControlEvents.valueChanged)
+        
+          }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        /* Set selected date to brithDate dataPicker */
+        if dateChoosen != nil {
+            
+           birthDate.setDate (dateChoosen! ,animated: false)
+           datePickerValueChanged()
+            
+        }
     }
     
     func datePickerValueChanged() {
         calculate()
+        buttonShowDetailVC.isEnabled = true
     }
 
     @IBAction func calculate() {
-        let calendar = Calendar.current
-        let components = (calendar as NSCalendar).components([.day , .month , .year], from: birthDate.date)
+       
+        /* Store selected date to assign back birthDate when viewWillAppear */
+        dateChoosen = birthDate.date
         
-        let dayStr = components.day?.toString()
-        let monStr = components.month?.toString()
-        let yeaStr = components.year?.toString()
-
-        DusevniCislo = (VratSoucet(dayStr!) + VratSoucet(monStr!) + VratSoucet(yeaStr!))
-        ZivotniCislo = VratSoucet(String(DusevniCislo))
-        ButtonZivotniCislo.setTitle(String(ZivotniCislo), for: UIControlState())
-        ButtonDatumNarozeni.setTitle(dayStr, for: UIControlState())
-        print(DusevniCislo)
+        let day = birthDate.date.toStringDay()
+        
+        BirthPathNumber = Int(day)!
+        LifePathNumber = addNumbers(Value: birthDate.date.toStringShort())
+        
+        /* Final calculation of Life Path Number*/
+        LifePathNumber = addNumbers(Value: String(LifePathNumber))
+        
+        buttonLifePathNumber.setTitle(String(LifePathNumber), for: UIControlState())
+        buttonBirthPathNumber.setTitle(day, for: UIControlState())
         
     }
 

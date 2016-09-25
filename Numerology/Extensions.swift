@@ -24,10 +24,19 @@ extension Date {
     func toStringShort() -> String {
         let formatter = DateFormatter()
         //        formatter.dateFormat = "yyyy-MM-dd"
-        formatter.dateFormat = "dd.MM.yyyy"
+        formatter.dateFormat = "ddMMyyyy"
         let str = formatter.string(from: self)
         return str
     }
+
+    func toStringDay() -> String {
+        let formatter = DateFormatter()
+        //        formatter.dateFormat = "yyyy-MM-dd"
+        formatter.dateFormat = "dd"
+        let str = formatter.string(from: self)
+        return str
+    }
+
 }
 
 extension Int {
@@ -37,11 +46,21 @@ extension Int {
     
 }
 
-func VratSoucet (_ Hodnota: String) -> Int {
-    let PoleHodnot = Hodnota.characters.flatMap { Int(String($0)) }
+func addNumbers (Value: String) -> Int {
+    let arrayValues = Value.characters.flatMap { Int(String($0)) }
     var result: Int = 0
-    for x in PoleHodnot {
-        result += x
+    
+    if (Int(Value) == 11) || (Int(Value) == 22) {
+    
+        return Int(Value)!
+        
     }
+    
+    for x in arrayValues {
+    
+       result += x
+        
+    }
+    
     return result
 }

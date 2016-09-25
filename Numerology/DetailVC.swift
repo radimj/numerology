@@ -22,23 +22,23 @@ class SecondViewController: UIViewController {
         fetchText(0)
     }
     
-    //fetchText - fetch number description from given dictionary: 0 - dict1 (Birth Day Number), 1 - dict2 (Life Number)
+    //fetchText - fetch number description from given dictionary: 0 - dict1 (Birth Path Number), 1 - dict2 (Life Path Number)
     func fetchText(_ dictNumber: Int) {
         switch dictNumber {
         case 0:
-            let dayDesc = dict1[ZivotniCislo]![0]
-            let dayNature = dict1[ZivotniCislo]![1]
-            let dayWeakness = dict1[ZivotniCislo]![2]
-            textView.text = dayDesc + lineSeparator
+            
+            let dayDesc = dict1[BirthPathNumber]![0]
+            let dayNature = dict1[BirthPathNumber]![1]
+            let dayWeakness = dict1[BirthPathNumber]![2]
+            textView.text = "Číslo dne narození - \(BirthPathNumber) - " + dayDesc + lineSeparator
                 + dayNature + lineSeparator
                 + dayWeakness
             break
         case 1:
-            DusevniCislo = Int(arc4random_uniform(8)+1)
-            let descPositive = dict2[DusevniCislo]![0]
-            let descNegative = dict2[DusevniCislo]![1]
-            textView.text = "Číslo duše - \(DusevniCislo)" + lineSeparator + descPositive + lineSeparator
-                + descNegative
+            let descPositive = dict2[LifePathNumber]![0]
+            let descNegative = dict2[LifePathNumber]![1]
+            textView.text = "Životní číslo - \(LifePathNumber)" + lineSeparator + descPositive + lineSeparator
+                    + descNegative
             break
         default:
             break
