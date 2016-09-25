@@ -15,7 +15,6 @@ extension Date {
     
     func toString() -> String {
         let formatter = DateFormatter()
-        //formatter.dateFormat = "yyyy'-'MM'-'dd HH':'mm':'ss"
         formatter.dateFormat = "dd.MM.yyyy HH:mm"
         let str = formatter.string(from: self)
         return str
@@ -23,7 +22,6 @@ extension Date {
     
     func toStringShort() -> String {
         let formatter = DateFormatter()
-        //        formatter.dateFormat = "yyyy-MM-dd"
         formatter.dateFormat = "ddMMyyyy"
         let str = formatter.string(from: self)
         return str
@@ -31,12 +29,10 @@ extension Date {
 
     func toStringDay() -> String {
         let formatter = DateFormatter()
-        //        formatter.dateFormat = "yyyy-MM-dd"
         formatter.dateFormat = "dd"
         let str = formatter.string(from: self)
         return str
     }
-
 }
 
 extension Int {
