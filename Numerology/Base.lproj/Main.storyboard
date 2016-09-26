@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,15 +19,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="9Pk-lH-Bro" userLabel="Background">
-                                <frame key="frameInset" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="9Pk-lH-Bro" userLabel="Background"/>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rd-GK-stK" userLabel="Btn Back">
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="14" id="55a-jR-vl7"/>
                                     <constraint firstAttribute="width" constant="14" id="C3C-OD-1IO"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="o7r-ZN-zF2"/>
                                     <constraint firstAttribute="height" constant="24" id="uOk-Ex-jd0"/>
                                 </constraints>
                                 <state key="normal" image="Back Arrow"/>
@@ -36,11 +30,9 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="showMainVC" id="1Lx-cJ-u2s"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hVI-qe-WyL">
-                                <frame key="frameInset" minX="24" minY="45" width="335" height="548"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hVI-qe-WyL">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">Tento program slouží k výpočtu životního čísla a zobrazení informaci o dni narození a životního čísla.
+                                <mutableString key="text">Tento program slouží k výpočtu životního čísla a zobrazení informaci o dni narození a životního čísla.
 
 Den narození je jedním z velmi důležitých údajů pro každého. Ukazuje nám na charakteristické vlastnosti, ponaučení a rovněž i slabiny, kterých je třeba se vystříhat. 
 
@@ -49,18 +41,15 @@ Vždy u každého data narození proto budou uvedeny 2 části:
 2) naše slabiny a čemu je dobré se naučit
 
 
-Životní číslo neboli sudové číslo. Získáme ho součtem celého data narození a redukujeme na čísla 1 – 9, přičemž čísla 11 a 22 se neredukují.</string>
+Životní číslo neboli osudové číslo. Získáme ho součtem celého data narození a redukujeme na čísla 1 – 9, přičemž čísla 11 a 22 se neredukují.</mutableString>
                                 <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="O programu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhJ-ZT-RZw">
-                                <frame key="frameInset" minX="119" minY="4" width="136" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O programu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhJ-ZT-RZw">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="3Hp-S9-yKh"/>
-                                    <constraint firstAttribute="width" constant="77" id="CE4-Ez-M3o"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="RIC-ea-zcQ"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="oba-GU-FdZ"/>
+                                    <constraint firstAttribute="width" constant="136" id="CE4-Ez-M3o"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -69,11 +58,16 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4Rd-GK-stK" firstAttribute="top" secondItem="69K-2H-8TU" secondAttribute="topMargin" constant="8" id="CdU-S8-wSe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QhJ-ZT-RZw" secondAttribute="trailing" constant="104" id="YuS-u6-1fP"/>
-                            <constraint firstItem="4Rd-GK-stK" firstAttribute="leading" secondItem="69K-2H-8TU" secondAttribute="leadingMargin" id="Zi3-0r-BKg"/>
-                            <constraint firstItem="QhJ-ZT-RZw" firstAttribute="leading" secondItem="4Rd-GK-stK" secondAttribute="trailing" constant="89" id="cal-8i-ayo"/>
-                            <constraint firstItem="QhJ-ZT-RZw" firstAttribute="top" secondItem="69K-2H-8TU" secondAttribute="topMargin" constant="4" id="d1T-hq-WKV"/>
+                            <constraint firstAttribute="bottom" secondItem="hVI-qe-WyL" secondAttribute="bottom" constant="20" symbolic="YES" id="6aa-e0-QYu"/>
+                            <constraint firstItem="4Rd-GK-stK" firstAttribute="top" secondItem="69K-2H-8TU" secondAttribute="topMargin" constant="17" id="CdU-S8-wSe"/>
+                            <constraint firstItem="9Pk-lH-Bro" firstAttribute="bottom" secondItem="g6i-dV-jcG" secondAttribute="top" id="JsV-sE-UI0"/>
+                            <constraint firstItem="9Pk-lH-Bro" firstAttribute="centerX" secondItem="QhJ-ZT-RZw" secondAttribute="centerX" id="QCJ-bw-adA"/>
+                            <constraint firstItem="hVI-qe-WyL" firstAttribute="trailing" secondItem="69K-2H-8TU" secondAttribute="trailingMargin" constant="-4" id="TlL-W7-6Qb"/>
+                            <constraint firstItem="hVI-qe-WyL" firstAttribute="leading" secondItem="69K-2H-8TU" secondAttribute="leadingMargin" constant="4" id="UfN-Zm-YYp"/>
+                            <constraint firstItem="hVI-qe-WyL" firstAttribute="top" secondItem="QhJ-ZT-RZw" secondAttribute="bottom" constant="50" id="WYh-v5-cZn"/>
+                            <constraint firstItem="4Rd-GK-stK" firstAttribute="leading" secondItem="69K-2H-8TU" secondAttribute="leadingMargin" constant="4" id="Zi3-0r-BKg"/>
+                            <constraint firstItem="QhJ-ZT-RZw" firstAttribute="top" secondItem="69K-2H-8TU" secondAttribute="topMargin" constant="17" id="d1T-hq-WKV"/>
+                            <constraint firstItem="QhJ-ZT-RZw" firstAttribute="centerX" secondItem="69K-2H-8TU" secondAttribute="centerX" id="p7a-8u-RJk"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -117,7 +111,7 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                                 <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpk-Cf-hDy" userLabel="Calculate" customClass="CustomButton" customModule="Numerology" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpk-Cf-hDy" userLabel="Calculate" customClass="CustomButton" customModule="Numerology" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Zobraz">
@@ -128,7 +122,8 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                                     <segue destination="xZo-qg-4tf" kind="show" identifier="showDescription" id="L6K-m4-cRy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Životní číslo:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm5-Mp-KwF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Životní číslo:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm5-Mp-KwF">
+                                <frame key="frameInset" minX="22" minY="522" width="134" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="mBc-bV-dnu"/>
                                     <constraint firstAttribute="width" constant="134" id="pcM-pY-0cS"/>
@@ -137,17 +132,8 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                                 <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TG0-8k-uMS">
-                                <frame key="frameInset" minX="173" minY="480" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3K3-rU-bLF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Den narození:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b1-4o-xRc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Den narození:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b1-4o-xRc">
+                                <frame key="frameInset" minX="22" minY="476" width="136" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="CjR-fR-I37"/>
                                     <constraint firstAttribute="width" constant="136" id="Ia3-oP-fKn"/>
@@ -156,77 +142,76 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                                 <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p19-0L-bmd">
-                                <frame key="frameInset" minX="173" minY="522" width="30" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAi-wx-Lay">
+                                <frame key="frameInset" minX="8" minY="67" width="48" height="38"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="QDO-vy-sEt"/>
+                                    <constraint firstAttribute="width" constant="48" id="4HY-pO-kZu"/>
+                                    <constraint firstAttribute="height" constant="38" id="cyg-Y7-N81"/>
+                                </constraints>
+                                <state key="normal" image="help_icon">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Rne-ey-vj8" kind="show" identifier="showHelpVC" id="9ca-R3-ApV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jh6-K6-626" userLabel="labelBirthPathNumber">
+                                <frame key="frameInset" minX="175" minY="476" width="40" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="9tp-dm-eDV"/>
+                                    <constraint firstAttribute="height" constant="38" id="nws-GC-8ME"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iGg-LD-Xw7">
-                                <frame key="frameInset" minX="22" minY="33" width="36" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAi-wx-Lay">
-                                        <frame key="frameInset" width="36" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="36" id="4HY-pO-kZu"/>
-                                            <constraint firstAttribute="height" constant="26" id="cyg-Y7-N81"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                        <state key="normal" title="?">
-                                            <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="Rne-ey-vj8" kind="show" identifier="showHelpVC" id="9ca-R3-ApV"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJj-r0-59B" userLabel="labelLifePathNumber">
+                                <frame key="frameInset" minX="175" minY="522" width="40" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="ECO-W1-ImF"/>
+                                    <constraint firstAttribute="height" constant="38" id="htp-Ge-w88"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jpk-Cf-hDy" firstAttribute="top" secondItem="4aK-Of-pQa" secondAttribute="bottom" constant="33" id="11p-Sx-6Ux"/>
-                            <constraint firstItem="p19-0L-bmd" firstAttribute="centerX" secondItem="4aK-Of-pQa" secondAttribute="centerX" id="5gE-zH-PYC"/>
+                            <constraint firstItem="Jh6-K6-626" firstAttribute="centerY" secondItem="7b1-4o-xRc" secondAttribute="centerY" id="4sS-st-JCJ"/>
                             <constraint firstItem="5Ta-b8-otV" firstAttribute="top" secondItem="Vl7-IO-wtg" secondAttribute="bottom" constant="23" id="9eS-ZM-3QC"/>
                             <constraint firstItem="Znw-zY-Ypi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="AMG-es-SbB"/>
-                            <constraint firstItem="p19-0L-bmd" firstAttribute="centerX" secondItem="Vl7-IO-wtg" secondAttribute="centerX" id="BE7-6D-Nt4"/>
+                            <constraint firstItem="dAi-wx-Lay" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="F4O-Qq-duL"/>
                             <constraint firstItem="5Ta-b8-otV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HYF-ZW-GwF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vl7-IO-wtg" secondAttribute="trailing" constant="-20" id="Jt4-d1-HxV"/>
                             <constraint firstItem="jpk-Cf-hDy" firstAttribute="centerX" secondItem="5Ta-b8-otV" secondAttribute="centerX" id="Ktr-0L-XBN"/>
-                            <constraint firstItem="7b1-4o-xRc" firstAttribute="firstBaseline" secondItem="TG0-8k-uMS" secondAttribute="firstBaseline" id="MeW-Fe-J6N"/>
-                            <constraint firstItem="p19-0L-bmd" firstAttribute="leading" secondItem="lm5-Mp-KwF" secondAttribute="trailing" constant="17" id="UVO-hL-jG1"/>
+                            <constraint firstItem="Jh6-K6-626" firstAttribute="leading" secondItem="7b1-4o-xRc" secondAttribute="trailing" constant="17" id="UwJ-Sk-Fti"/>
                             <constraint firstItem="lm5-Mp-KwF" firstAttribute="top" secondItem="7b1-4o-xRc" secondAttribute="bottom" constant="8" symbolic="YES" id="W9N-E6-dXh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4aK-Of-pQa" secondAttribute="trailing" constant="-20" id="WwH-oD-eKM"/>
-                            <constraint firstItem="7b1-4o-xRc" firstAttribute="top" secondItem="TG0-8k-uMS" secondAttribute="top" id="YUO-k9-R76"/>
                             <constraint firstItem="jpk-Cf-hDy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="105" id="amJ-uY-E9e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Znw-zY-Ypi" secondAttribute="trailing" constant="-20" id="cpK-ql-T26"/>
                             <constraint firstItem="Vl7-IO-wtg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="es3-1N-T8v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jpk-Cf-hDy" secondAttribute="trailing" constant="105" id="ggc-kM-CKz"/>
                             <constraint firstItem="4aK-Of-pQa" firstAttribute="top" secondItem="5Ta-b8-otV" secondAttribute="bottom" constant="8" id="j7I-Pv-eb8"/>
-                            <constraint firstItem="TG0-8k-uMS" firstAttribute="leading" secondItem="7b1-4o-xRc" secondAttribute="trailing" constant="16" id="lCS-k7-ftp"/>
-                            <constraint firstItem="p19-0L-bmd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nsc-AB-wsa"/>
                             <constraint firstItem="Vl7-IO-wtg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="oiu-m5-hcb"/>
-                            <constraint firstItem="p19-0L-bmd" firstAttribute="centerX" secondItem="Znw-zY-Ypi" secondAttribute="centerX" id="pVo-is-stN"/>
                             <constraint firstItem="4aK-Of-pQa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="qru-8Z-nEh"/>
+                            <constraint firstItem="hJj-r0-59B" firstAttribute="centerY" secondItem="lm5-Mp-KwF" secondAttribute="centerY" id="qz0-T8-07c"/>
+                            <constraint firstItem="hJj-r0-59B" firstAttribute="leading" secondItem="lm5-Mp-KwF" secondAttribute="trailing" constant="19" id="sN2-lB-Epa"/>
                             <constraint firstItem="7b1-4o-xRc" firstAttribute="top" secondItem="jpk-Cf-hDy" secondAttribute="bottom" constant="31" id="t4X-5g-f8G"/>
                             <constraint firstItem="Znw-zY-Ypi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="tEm-yE-CQU"/>
-                            <constraint firstItem="p19-0L-bmd" firstAttribute="top" secondItem="TG0-8k-uMS" secondAttribute="bottom" constant="15" id="uvI-Fd-owD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Znw-zY-Ypi" secondAttribute="bottom" id="wyq-xB-1AM"/>
                             <constraint firstItem="lm5-Mp-KwF" firstAttribute="leading" secondItem="7b1-4o-xRc" secondAttribute="leading" id="x7d-bR-y4b"/>
-                            <constraint firstItem="p19-0L-bmd" firstAttribute="centerX" secondItem="jpk-Cf-hDy" secondAttribute="centerX" id="xbL-Me-n0O"/>
+                            <constraint firstItem="dAi-wx-Lay" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="68" id="xjJ-YC-h9G"/>
                             <constraint firstItem="jpk-Cf-hDy" firstAttribute="top" secondItem="4aK-Of-pQa" secondAttribute="bottom" constant="33" id="z8A-Os-6rC"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="birthDate" destination="4aK-Of-pQa" id="8YL-Pq-STV"/>
-                        <outlet property="buttonBirthPathNumber" destination="TG0-8k-uMS" id="IDf-XC-8pe"/>
                         <outlet property="buttonHelp" destination="dAi-wx-Lay" id="Tzd-t6-0jK"/>
-                        <outlet property="buttonLifePathNumber" destination="p19-0L-bmd" id="S2T-MY-fmb"/>
                         <outlet property="buttonShowDetailVC" destination="jpk-Cf-hDy" id="Mxm-fn-JQc"/>
+                        <outlet property="labelBirthPathNumber" destination="Jh6-K6-626" id="SbJ-5C-9ru"/>
+                        <outlet property="labelLifePathNumber" destination="hJj-r0-59B" id="PIr-Qw-9Gv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -245,13 +230,8 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="tHF-RF-PZB">
-                                <frame key="frameInset" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Text pro dané číslo neexistuje" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7G8-yO-OeJ">
-                                <frame key="frameInset" minX="20" minY="99" width="335" height="548"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="tHF-RF-PZB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text pro dané číslo neexistuje" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7G8-yO-OeJ">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -266,17 +246,13 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                                 <color key="textColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbV-QZ-os4">
-                                <frame key="frameInset" minX="20" minY="17" width="14" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbV-QZ-os4">
                                 <state key="normal" image="Back Arrow"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="showMainVC" id="lu5-cJ-G9p"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z6c-LG-20U">
-                                <frame key="frameInset" minX="20" minY="55" width="339" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z6c-LG-20U">
                                 <segments>
                                     <segment title="Den narození"/>
                                     <segment title="Životní číslo"/>
@@ -289,8 +265,19 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="7G8-yO-OeJ" firstAttribute="top" secondItem="z6c-LG-20U" secondAttribute="bottom" constant="16" id="1OE-HN-rDP"/>
+                            <constraint firstItem="tHF-RF-PZB" firstAttribute="centerX" secondItem="frs-cV-5dU" secondAttribute="centerX" id="3xA-Cv-zAx"/>
+                            <constraint firstItem="RbV-QZ-os4" firstAttribute="leading" secondItem="z6c-LG-20U" secondAttribute="leading" id="7QH-4T-qJf"/>
+                            <constraint firstItem="RbV-QZ-os4" firstAttribute="centerY" secondItem="frs-cV-5dU" secondAttribute="centerY" id="AO4-SA-1ra"/>
+                            <constraint firstItem="z6c-LG-20U" firstAttribute="trailing" secondItem="rZN-Rp-4n3" secondAttribute="trailingMargin" id="Byf-to-TpK"/>
+                            <constraint firstItem="tHF-RF-PZB" firstAttribute="bottom" secondItem="GiY-hm-Zmi" secondAttribute="top" id="CjH-0e-iQa"/>
                             <constraint firstItem="frs-cV-5dU" firstAttribute="top" secondItem="rZN-Rp-4n3" secondAttribute="topMargin" constant="13" id="EwE-Kd-P0j"/>
+                            <constraint firstItem="RbV-QZ-os4" firstAttribute="leading" secondItem="rZN-Rp-4n3" secondAttribute="leadingMargin" constant="4" id="VSB-0w-pnb"/>
                             <constraint firstItem="frs-cV-5dU" firstAttribute="centerX" secondItem="rZN-Rp-4n3" secondAttribute="centerX" id="dZw-9a-q6P"/>
+                            <constraint firstItem="z6c-LG-20U" firstAttribute="leading" secondItem="7G8-yO-OeJ" secondAttribute="leading" id="dfC-vL-rcf"/>
+                            <constraint firstItem="7G8-yO-OeJ" firstAttribute="centerX" secondItem="frs-cV-5dU" secondAttribute="centerX" id="gND-km-4To"/>
+                            <constraint firstItem="z6c-LG-20U" firstAttribute="top" secondItem="frs-cV-5dU" secondAttribute="bottom" constant="10" id="vp8-1b-GOh"/>
+                            <constraint firstAttribute="bottom" secondItem="7G8-yO-OeJ" secondAttribute="bottom" constant="20" symbolic="YES" id="zXj-Ih-McQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="LcS-jR-Zlc"/>
@@ -309,6 +296,7 @@ Vždy u každého data narození proto budou uvedeny 2 části:
         <image name="Back Arrow" width="14" height="24"/>
         <image name="Background" width="375" height="667"/>
         <image name="Logo" width="375" height="84"/>
+        <image name="help_icon" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1Lx-cJ-u2s"/>

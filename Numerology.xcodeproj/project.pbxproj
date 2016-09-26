@@ -135,7 +135,7 @@
 				TargetAttributes = {
 					E12229381D8689A700AE819E = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = UXF8UA88YK;
+						DevelopmentTeam = 2B2V5TA2BM;
 						LastSwiftMigration = 0800;
 					};
 				};
@@ -297,10 +297,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UXF8UA88YK;
+				DEVELOPMENT_TEAM = 2B2V5TA2BM;
 				INFOPLIST_FILE = Numerology/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jarosek.Numerology;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sibek.Numerology;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -310,10 +310,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UXF8UA88YK;
+				DEVELOPMENT_TEAM = 2B2V5TA2BM;
 				INFOPLIST_FILE = Numerology/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jarosek.Numerology;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sibek.Numerology;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

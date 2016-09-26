@@ -26,7 +26,6 @@ class SecondViewController: UIViewController {
     func fetchText(_ dictNumber: Int) {
         switch dictNumber {
         case 0:
-            
             let dayDesc = dict1[BirthPathNumber]![0]
             let dayNature = dict1[BirthPathNumber]![1]
             let dayWeakness = dict1[BirthPathNumber]![2]
@@ -35,6 +34,7 @@ class SecondViewController: UIViewController {
                 + dayWeakness
             break
         case 1:
+            //Select eg. 26.11.2016 - there's an error for LifePathNumber - 10
             let descPositive = dict2[LifePathNumber]![0]
             let descNegative = dict2[LifePathNumber]![1]
             textView.text = "Životní číslo - \(LifePathNumber)" + lineSeparator + descPositive + lineSeparator
