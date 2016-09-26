@@ -32,7 +32,7 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hVI-qe-WyL">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <mutableString key="text">Tento program slouží k výpočtu životního čísla a zobrazení informaci o dni narození a životního čísla.
+                                <string key="text">Tento program slouží k výpočtu životního čísla a zobrazení informaci o dni narození a životního čísla.
 
 Den narození je jedním z velmi důležitých údajů pro každého. Ukazuje nám na charakteristické vlastnosti, ponaučení a rovněž i slabiny, kterých je třeba se vystříhat. 
 
@@ -41,7 +41,7 @@ Vždy u každého data narození proto budou uvedeny 2 části:
 2) naše slabiny a čemu je dobré se naučit
 
 
-Životní číslo neboli osudové číslo. Získáme ho součtem celého data narození a redukujeme na čísla 1 – 9, přičemž čísla 11 a 22 se neredukují.</mutableString>
+Životní číslo neboli osudové číslo. Získáme ho součtem celého data narození a redukujeme na čísla 1 – 9, přičemž čísla 11 a 22 se neredukují.</string>
                                 <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -122,26 +122,6 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                                     <segue destination="xZo-qg-4tf" kind="show" identifier="showDescription" id="L6K-m4-cRy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Životní číslo:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm5-Mp-KwF">
-                                <frame key="frameInset" minX="22" minY="522" width="134" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="mBc-bV-dnu"/>
-                                    <constraint firstAttribute="width" constant="134" id="pcM-pY-0cS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Den narození:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b1-4o-xRc">
-                                <frame key="frameInset" minX="22" minY="476" width="136" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="CjR-fR-I37"/>
-                                    <constraint firstAttribute="width" constant="136" id="Ia3-oP-fKn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAi-wx-Lay">
                                 <frame key="frameInset" minX="8" minY="67" width="48" height="38"/>
                                 <constraints>
@@ -155,20 +135,36 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                                     <segue destination="Rne-ey-vj8" kind="show" identifier="showHelpVC" id="9ca-R3-ApV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jh6-K6-626" userLabel="labelBirthPathNumber">
-                                <frame key="frameInset" minX="175" minY="476" width="40" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Životní číslo:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm5-Mp-KwF">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="136" id="9tp-dm-eDV"/>
+                                    <constraint firstAttribute="height" constant="38" id="mBc-bV-dnu"/>
+                                    <constraint firstAttribute="width" constant="134" id="pcM-pY-0cS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Den narození:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b1-4o-xRc">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="CjR-fR-I37"/>
+                                    <constraint firstAttribute="width" constant="136" id="Ia3-oP-fKn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jh6-K6-626" userLabel="birthDayNumber">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="9tp-dm-eDV"/>
                                     <constraint firstAttribute="height" constant="38" id="nws-GC-8ME"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJj-r0-59B" userLabel="labelLifePathNumber">
-                                <frame key="frameInset" minX="175" minY="522" width="40" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJj-r0-59B" userLabel="lifePathNumber">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="136" id="ECO-W1-ImF"/>
+                                    <constraint firstAttribute="width" constant="40" id="ECO-W1-ImF"/>
                                     <constraint firstAttribute="height" constant="38" id="htp-Ge-w88"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -191,6 +187,7 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                             <constraint firstAttribute="trailingMargin" secondItem="4aK-Of-pQa" secondAttribute="trailing" constant="-20" id="WwH-oD-eKM"/>
                             <constraint firstItem="jpk-Cf-hDy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="105" id="amJ-uY-E9e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Znw-zY-Ypi" secondAttribute="trailing" constant="-20" id="cpK-ql-T26"/>
+                            <constraint firstItem="7b1-4o-xRc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="d2A-1O-51j"/>
                             <constraint firstItem="Vl7-IO-wtg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="es3-1N-T8v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jpk-Cf-hDy" secondAttribute="trailing" constant="105" id="ggc-kM-CKz"/>
                             <constraint firstItem="4aK-Of-pQa" firstAttribute="top" secondItem="5Ta-b8-otV" secondAttribute="bottom" constant="8" id="j7I-Pv-eb8"/>
@@ -198,7 +195,7 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                             <constraint firstItem="4aK-Of-pQa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="qru-8Z-nEh"/>
                             <constraint firstItem="hJj-r0-59B" firstAttribute="centerY" secondItem="lm5-Mp-KwF" secondAttribute="centerY" id="qz0-T8-07c"/>
                             <constraint firstItem="hJj-r0-59B" firstAttribute="leading" secondItem="lm5-Mp-KwF" secondAttribute="trailing" constant="19" id="sN2-lB-Epa"/>
-                            <constraint firstItem="7b1-4o-xRc" firstAttribute="top" secondItem="jpk-Cf-hDy" secondAttribute="bottom" constant="31" id="t4X-5g-f8G"/>
+                            <constraint firstItem="7b1-4o-xRc" firstAttribute="top" secondItem="jpk-Cf-hDy" secondAttribute="bottom" constant="36" id="t4X-5g-f8G"/>
                             <constraint firstItem="Znw-zY-Ypi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="tEm-yE-CQU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Znw-zY-Ypi" secondAttribute="bottom" id="wyq-xB-1AM"/>
                             <constraint firstItem="lm5-Mp-KwF" firstAttribute="leading" secondItem="7b1-4o-xRc" secondAttribute="leading" id="x7d-bR-y4b"/>
@@ -210,7 +207,7 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                         <outlet property="birthDate" destination="4aK-Of-pQa" id="8YL-Pq-STV"/>
                         <outlet property="buttonHelp" destination="dAi-wx-Lay" id="Tzd-t6-0jK"/>
                         <outlet property="buttonShowDetailVC" destination="jpk-Cf-hDy" id="Mxm-fn-JQc"/>
-                        <outlet property="labelBirthPathNumber" destination="Jh6-K6-626" id="SbJ-5C-9ru"/>
+                        <outlet property="labelBirthDay" destination="Jh6-K6-626" id="sHM-hk-oni"/>
                         <outlet property="labelLifePathNumber" destination="hJj-r0-59B" id="PIr-Qw-9Gv"/>
                     </connections>
                 </viewController>

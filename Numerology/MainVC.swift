@@ -8,15 +8,15 @@
 
 import UIKit
 
-var LifePathNumber: Int = 0
-var BirthPathNumber: Int = 0
+var lifePathNumber: Int = 0
+var birthDayNumber: Int = 0
 var dateChoosen: Date?
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var birthDate: UIDatePicker!
     @IBOutlet weak var buttonShowDetailVC: CustomButton!
-    @IBOutlet weak var labelBirthPathNumber: UILabel!
+    @IBOutlet weak var labelBirthDay: UILabel!
     @IBOutlet weak var labelLifePathNumber: UILabel!
     @IBOutlet weak var buttonHelp: UIButton!
     
@@ -45,19 +45,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculate() {
-        /* Store selected date to assign back birthDate when viewWillAppear */
         dateChoosen = birthDate.date
-        
         let day = birthDate.date.toStringDay()
-        
-        BirthPathNumber = Int(day)!
-        LifePathNumber = addNumbers(Value: birthDate.date.toStringShort())
-        
-        /* Final calculation of Life Path Number*/
-        LifePathNumber = addNumbers(Value: String(LifePathNumber))
-        
-        labelLifePathNumber.text = String(LifePathNumber)
-        labelBirthPathNumber.text = day
+        birthDayNumber = Int(day)!
+        lifePathNumber = getLifePathNumber(dateStr: birthDate.date.toStringShort())
+        labelBirthDay.text = Int(day)?.toString()
+        labelLifePathNumber.text = String(lifePathNumber)
     }
 
 }

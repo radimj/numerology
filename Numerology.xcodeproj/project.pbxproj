@@ -16,6 +16,7 @@
 		E12229521D86B05800AE819E /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12229511D86B05800AE819E /* DetailVC.swift */; };
 		E12229541D86B07600AE819E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12229531D86B07600AE819E /* CustomButton.swift */; };
 		E1426C241D86EB2600B6F2A8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1426C231D86EB2600B6F2A8 /* Extensions.swift */; };
+		E154FDE11D9985AA005147FF /* magic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E154FDE01D9985AA005147FF /* magic.mp3 */; };
 		E15D70661D8EBB750068D5C5 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D70651D8EBB750068D5C5 /* Data.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		E12229511D86B05800AE819E /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		E12229531D86B07600AE819E /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		E1426C231D86EB2600B6F2A8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E154FDE01D9985AA005147FF /* magic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = magic.mp3; sourceTree = "<group>"; };
 		E15D70651D8EBB750068D5C5 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 				E122294F1D86AFFE00AE819E /* View */,
 				E12229501D86B00400AE819E /* Controller */,
 				E122293C1D8689A800AE819E /* AppDelegate.swift */,
+				E154FDE01D9985AA005147FF /* magic.mp3 */,
 				E12229401D8689A800AE819E /* Main.storyboard */,
 				E12229431D8689A800AE819E /* Assets.xcassets */,
 				E12229451D8689A800AE819E /* LaunchScreen.storyboard */,
@@ -130,7 +133,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = sibek;
 				TargetAttributes = {
 					E12229381D8689A700AE819E = {
@@ -163,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E154FDE11D9985AA005147FF /* magic.mp3 in Resources */,
 				E12229471D8689A800AE819E /* LaunchScreen.storyboard in Resources */,
 				E12229441D8689A800AE819E /* Assets.xcassets in Resources */,
 				E12229421D8689A800AE819E /* Main.storyboard in Resources */,
@@ -222,8 +226,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -268,8 +274,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -288,6 +296,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
