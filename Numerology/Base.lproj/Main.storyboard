@@ -20,16 +20,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="9Pk-lH-Bro" userLabel="Background"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rd-GK-stK" userLabel="Btn Back">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="14" id="C3C-OD-1IO"/>
-                                    <constraint firstAttribute="height" constant="24" id="uOk-Ex-jd0"/>
-                                </constraints>
-                                <state key="normal" image="Back Arrow"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showMainVC" id="1Lx-cJ-u2s"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hVI-qe-WyL">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Tento program slouží k výpočtu životního čísla a zobrazení informaci o dni narození a životního čísla.
@@ -55,17 +45,29 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                                 <color key="textColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Rd-GK-stK" userLabel="Btn Back">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="C3C-OD-1IO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="O6T-rX-kbV"/>
+                                    <constraint firstAttribute="height" constant="44" id="uOk-Ex-jd0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ugA-e6-rwB"/>
+                                </constraints>
+                                <state key="normal" image="Back Arrow"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showMainVC" id="1Lx-cJ-u2s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="hVI-qe-WyL" secondAttribute="bottom" constant="20" symbolic="YES" id="6aa-e0-QYu"/>
-                            <constraint firstItem="4Rd-GK-stK" firstAttribute="top" secondItem="69K-2H-8TU" secondAttribute="topMargin" constant="17" id="CdU-S8-wSe"/>
+                            <constraint firstItem="4Rd-GK-stK" firstAttribute="top" secondItem="69K-2H-8TU" secondAttribute="topMargin" constant="13" id="CdU-S8-wSe"/>
                             <constraint firstItem="9Pk-lH-Bro" firstAttribute="bottom" secondItem="g6i-dV-jcG" secondAttribute="top" id="JsV-sE-UI0"/>
                             <constraint firstItem="9Pk-lH-Bro" firstAttribute="centerX" secondItem="QhJ-ZT-RZw" secondAttribute="centerX" id="QCJ-bw-adA"/>
                             <constraint firstItem="hVI-qe-WyL" firstAttribute="trailing" secondItem="69K-2H-8TU" secondAttribute="trailingMargin" constant="-4" id="TlL-W7-6Qb"/>
                             <constraint firstItem="hVI-qe-WyL" firstAttribute="leading" secondItem="69K-2H-8TU" secondAttribute="leadingMargin" constant="4" id="UfN-Zm-YYp"/>
                             <constraint firstItem="hVI-qe-WyL" firstAttribute="top" secondItem="QhJ-ZT-RZw" secondAttribute="bottom" constant="50" id="WYh-v5-cZn"/>
-                            <constraint firstItem="4Rd-GK-stK" firstAttribute="leading" secondItem="69K-2H-8TU" secondAttribute="leadingMargin" constant="4" id="Zi3-0r-BKg"/>
+                            <constraint firstItem="4Rd-GK-stK" firstAttribute="leading" secondItem="69K-2H-8TU" secondAttribute="leadingMargin" constant="-6" id="Zi3-0r-BKg"/>
                             <constraint firstItem="QhJ-ZT-RZw" firstAttribute="top" secondItem="69K-2H-8TU" secondAttribute="topMargin" constant="17" id="d1T-hq-WKV"/>
                             <constraint firstItem="QhJ-ZT-RZw" firstAttribute="centerX" secondItem="69K-2H-8TU" secondAttribute="centerX" id="p7a-8u-RJk"/>
                         </constraints>
@@ -243,12 +245,6 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                                 <color key="textColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbV-QZ-os4">
-                                <state key="normal" image="Back Arrow"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showMainVC" id="lu5-cJ-G9p"/>
-                                </connections>
-                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z6c-LG-20U">
                                 <segments>
                                     <segment title="Den narození"/>
@@ -259,17 +255,27 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                                     <action selector="tabChanged:" destination="xZo-qg-4tf" eventType="valueChanged" id="47g-sR-YfC"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbV-QZ-os4">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="JgK-Bs-Cnk"/>
+                                    <constraint firstAttribute="height" constant="44" id="SUv-05-lhe"/>
+                                </constraints>
+                                <state key="normal" image="Back Arrow"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="showMainVC" id="lu5-cJ-G9p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7G8-yO-OeJ" firstAttribute="top" secondItem="z6c-LG-20U" secondAttribute="bottom" constant="16" id="1OE-HN-rDP"/>
+                            <constraint firstItem="z6c-LG-20U" firstAttribute="leading" secondItem="rZN-Rp-4n3" secondAttribute="leadingMargin" id="2FX-If-AkV"/>
                             <constraint firstItem="tHF-RF-PZB" firstAttribute="centerX" secondItem="frs-cV-5dU" secondAttribute="centerX" id="3xA-Cv-zAx"/>
-                            <constraint firstItem="RbV-QZ-os4" firstAttribute="leading" secondItem="z6c-LG-20U" secondAttribute="leading" id="7QH-4T-qJf"/>
-                            <constraint firstItem="RbV-QZ-os4" firstAttribute="centerY" secondItem="frs-cV-5dU" secondAttribute="centerY" id="AO4-SA-1ra"/>
+                            <constraint firstItem="RbV-QZ-os4" firstAttribute="centerY" secondItem="frs-cV-5dU" secondAttribute="centerY" constant="2" id="AO4-SA-1ra"/>
                             <constraint firstItem="z6c-LG-20U" firstAttribute="trailing" secondItem="rZN-Rp-4n3" secondAttribute="trailingMargin" id="Byf-to-TpK"/>
                             <constraint firstItem="tHF-RF-PZB" firstAttribute="bottom" secondItem="GiY-hm-Zmi" secondAttribute="top" id="CjH-0e-iQa"/>
                             <constraint firstItem="frs-cV-5dU" firstAttribute="top" secondItem="rZN-Rp-4n3" secondAttribute="topMargin" constant="13" id="EwE-Kd-P0j"/>
-                            <constraint firstItem="RbV-QZ-os4" firstAttribute="leading" secondItem="rZN-Rp-4n3" secondAttribute="leadingMargin" constant="4" id="VSB-0w-pnb"/>
+                            <constraint firstItem="RbV-QZ-os4" firstAttribute="leading" secondItem="rZN-Rp-4n3" secondAttribute="leadingMargin" constant="-6" id="VSB-0w-pnb"/>
                             <constraint firstItem="frs-cV-5dU" firstAttribute="centerX" secondItem="rZN-Rp-4n3" secondAttribute="centerX" id="dZw-9a-q6P"/>
                             <constraint firstItem="z6c-LG-20U" firstAttribute="leading" secondItem="7G8-yO-OeJ" secondAttribute="leading" id="dfC-vL-rcf"/>
                             <constraint firstItem="7G8-yO-OeJ" firstAttribute="centerX" secondItem="frs-cV-5dU" secondAttribute="centerX" id="gND-km-4To"/>
