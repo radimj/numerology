@@ -20,7 +20,7 @@ class SecondViewController: UIViewController {
 
         //TODO: Add error handling for empty texts
         fetchText(0)
-
+        // Robert's changes
 //        playAudio()
 
     }
