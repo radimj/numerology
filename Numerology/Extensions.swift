@@ -44,12 +44,10 @@ extension Int {
     }
 }
 
+
 func addNumbers (Value: String) -> Int {
     let arrayValues = Value.characters.flatMap { Int(String($0)) }
     var result: Int = 0
-    if (Int(Value) == 11) || (Int(Value) == 22) {
-        return Int(Value)!
-    }
     for x in arrayValues {
        result += x
     }
