@@ -20,7 +20,17 @@ class SecondViewController: UIViewController {
 
         //TODO: Add error handling for empty texts
         fetchText(0)
-//        playAudio()
+        //playAudio()
+
+    }
+    
+
+  
+    override func viewWillAppear(_ animated: Bool) {
+        DispatchQueue.main.async {
+             self.textView.scrollRangeToVisible(NSRange(location: 0,length: 0))
+        }
+        
 
     }
     
@@ -34,6 +44,8 @@ class SecondViewController: UIViewController {
             textView.text = "Číslo dne narození - \(birthDayNumber) - " + dayDesc + lineSeparator
                 + dayNature + lineSeparator
                 + dayWeakness
+            textView.scrollRangeToVisible(NSRange(location: 0,length: 0))
+            
             break
         case 1:
             //Select eg. 26.11.2016 - there's an error for lifePathNumber - 10
@@ -41,6 +53,8 @@ class SecondViewController: UIViewController {
             let descNegative = dict2[lifePathNumber]![1]
             textView.text = "Životní číslo - \(lifePathNumber)" + lineSeparator + descPositive + lineSeparator
                     + descNegative
+            textView.scrollRangeToVisible(NSRange(location: 0,length: 0))
+            
             break
         default:
             break
@@ -49,12 +63,18 @@ class SecondViewController: UIViewController {
     
 
     @IBAction func tabChanged(_ sender: AnyObject) {
+        
         if segmentedControl.selectedSegmentIndex == 0 {
             fetchText(0)
+           // textView.scrollRangeToVisible(NSRange(location: 0,length: 0))
+            
+            
         }
         
         if segmentedControl.selectedSegmentIndex == 1 {
             fetchText(1)
+          //  textView.scrollRangeToVisible(NSRange(location: 0,length: 0))
+            
         }
     }
     

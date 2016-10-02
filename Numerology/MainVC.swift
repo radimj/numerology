@@ -26,8 +26,8 @@ class ViewController: UIViewController {
 //        dataTest(dictNumber: 2)
         
         birthDate.setValue(UIColor.white, forKeyPath: "textColor")
-//        birthDate.setValue(true, forKeyPath: "highlightsToday")
-//        birthDate.performSelector(inBackground: Selector(("setHighlightsToday:")), with: UIColor.white)
+        birthDate.setValue(true, forKeyPath: "highlightsToday")
+        birthDate.performSelector(inBackground: Selector(("setHighlightsToday:")), with: UIColor.white)
         birthDate.addTarget(self, action: #selector(self.datePickerValueChanged), for: UIControlEvents.valueChanged)
         
     }
