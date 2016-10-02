@@ -22,7 +22,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="9Pk-lH-Bro" userLabel="Background"/>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hVI-qe-WyL">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">Tento program slouží k výpočtu životního čísla a zobrazení informaci o dni narození a životního čísla.
+                                <mutableString key="text">Tento program slouží k výpočtu životního čísla a zobrazení informaci o dni narození a životního čísla.
 
 Den narození je jedním z velmi důležitých údajů pro každého. Ukazuje nám na charakteristické vlastnosti, ponaučení a rovněž i slabiny, kterých je třeba se vystříhat. 
 
@@ -31,12 +31,12 @@ Vždy u každého data narození proto budou uvedeny 2 části:
 2) naše slabiny a čemu je dobré se naučit
 
 
-Životní číslo neboli osudové číslo. Získáme ho součtem celého data narození a redukujeme na čísla 1 – 9, přičemž čísla 11 a 22 se neredukují.</string>
+Životní číslo neboli osudové číslo. Získáme ho součtem celého data narození a redukujeme na čísla 1 – 9, přičemž čísla 11 a 22 se neredukují.</mutableString>
                                 <color key="textColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O programu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhJ-ZT-RZw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nápověda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhJ-ZT-RZw">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="3Hp-S9-yKh"/>
                                     <constraint firstAttribute="width" constant="136" id="CE4-Ez-M3o"/>
@@ -57,6 +57,18 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="showMainVC" id="1Lx-cJ-u2s"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pg2-8x-hBz">
+                                <frame key="frameInset" minX="16" minY="55" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Co je to Numerologie?"/>
+                                    <segment title="O aplikaci"/>
+                                </segments>
+                                <color key="tintColor" red="0.31764705879999999" green="0.63921568630000003" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="Rne-ey-vj8" eventType="valueChanged" id="G6w-Yc-a5h"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -72,6 +84,9 @@ Vždy u každého data narození proto budou uvedeny 2 části:
                             <constraint firstItem="QhJ-ZT-RZw" firstAttribute="centerX" secondItem="69K-2H-8TU" secondAttribute="centerX" id="p7a-8u-RJk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="hVI-qe-WyL" id="JKT-ds-shG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fl7-fH-HVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

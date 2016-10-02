@@ -11,9 +11,21 @@ import UIKit
 class ThirdViewController: UIViewController {
     
     
+    @IBOutlet weak var textField: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        textField.text = help_text
+        
+        
     }
+    
+    @IBAction func segmentChanged(_ sender: AnyObject) {
+        
+    }
+    
+    
     
 }

@@ -56,6 +56,11 @@ let dict2 = [
     22:["Tato osoba má snahu po kolektivní činnosti. Je vysoké inteligence. Osobní život je na druhém místě. Má touhu budovat pro druhé. Vidí daleko a v širokých souvislostech. Má inspiraci a sílu. Je dobré naslouchat svému vnitřnímu hlasu. ","Snažit se o lidský přístup. Pozor na duševní přetíženost až poblouznění. Vyhýbat se nesoustředěnosti."]
 ]
 
+let help_text = "Numerologie je moderní označení pro výklady významu čísel. Její název pochází z latinského numerus – číslo. Zkoumání čísel a jejich vibrací, má své kořeny v dávné minulosti. Již v biblických dobách lidé tušili, že čísla a jejich vibrace mají velký význam. Každá taková vibrace silně ovlivňuje naše životy. Čísla od jedničky  do devítky představují úplný proces tvoření, a to od počátku zrození Vesmíru.Numerologie je úzce spjata  s astrologií a vzájemně se doplňují. Za zakladatele numerologie lze považovat starověkého matematika Pythagora, který žil v 6. století př. n. l. Starořečtí pythagorejci věřili, že podstatou všeho je číslo. Čísla pro ně byla i symbolem určitých duchovních hodnot, např. spravedlnost vyjadřovali číslem 4(2×2) nebo číslem 9(3×3). Phytagoras a jeho stoupenci se snažili, aby lidé z čísel, která obsahují jisté informace, pochopili sami sebe. Svůj život a jeho zákonitosti a znovu navázali spojení s duchovnem. Tato myšlenka zůstala aktuální až do dnešní doby.\n Den narození je jedním z velmi důležitých údajů pro každého. Ukazuje nám na charakteristické vlastnosti, ponaučení a rovněž i slabiny, kterých je třeba se vystříhat.\n Životní číslo neboli osudové číslo. Získáme ho součtem celého data narození a redukujeme na čísla 1 – 9, přičemž čísla 11 a 22 se neredukují."
+
+
+
+
 func dataTest(dictNumber: Int) {
     switch dictNumber {
     case 1:
