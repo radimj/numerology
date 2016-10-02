@@ -25,8 +25,14 @@ class SecondViewController: UIViewController {
     }
     
 
-    
-    
+  
+    override func viewWillAppear(_ animated: Bool) {
+        DispatchQueue.main.async {
+             self.textView.scrollRangeToVisible(NSRange(location: 0,length: 0))
+        }
+        
+
+    }
     
     //fetchText - fetch number description from given dictionary: 0 - dict1 (Birth Path Number), 1 - dict2 (Life Path Number)
     func fetchText(_ dictNumber: Int) {
